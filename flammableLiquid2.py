@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-auto = int(input('Автомобиль: 1 - Caddy; 2 - Kengoo [1]: ') or 1)
+auto = int(input('Автомобиль: 1 - Caddy; 2 - Kengoo [2]: ') or 2)
 if auto == 1:
   tankVolume = 60
   devision = 16
 elif auto == 2:
   tankVolume = 50
-  devision = 12
+  devision = 10
   
-odoStart = int(input('Одометр при выезде, км: ') or '115262')
-odoStop = int(input('Одометр при заезде, км: ') or '115336')
+odoStart = int(input('Одометр при выезде, км: ') or '230504')
+odoStop = int(input('Одометр при заезде, км: ') or '231227')
 planOdo = int(input('Планируемый пробег до гаража, км [4]: ') or '4')
-tankStart = int(input('Уровень в баке при выезде, л: ') or '50')
-tankStop = float(input('Стрелка уровня в баке при заезде, делений: ') or '12.5')
+tankStart = int(input('Уровень в баке при выезде, л: ') or '25')
+tankStop = float(input('Стрелка уровня в баке при заезде, делений: ') or '8')
 charges = input('Заправки через пробел, л [0]: ') or '0'
 charges = charges.split()
 k = 0
@@ -22,7 +22,7 @@ for i in charges:
 charges = k
 tankCharge = tankStart + charges
 
-planConsumption = float(input('Планируемый расход, л/100 км [9.5]:') or 9.5)
+planConsumption = float(input('Планируемый расход, л/100 км [10.5]:') or 10.5)
 
 #print(str(charges))
 
